@@ -1,0 +1,38 @@
+﻿@model Vidly.ViewModels.MovieFormViewModel
+
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit Movie</h2>
+
+@using (Html.BeginForm("Update", "Movies", FormMethod.Post, new { id = "submitForm" }))
+{
+    <section class="form-field">
+        <div class="form-group">
+            @Html.LabelFor(m => Model.Name)
+            @Html.TextBoxFor(m => Model.Name, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => Model.ReleaseDate)
+            @Html.TextBoxFor(m => Model.ReleaseDate, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => Model.GenreId)
+            @Html.DropDownListFor(m => Model.GenreId, new SelectList(Model.GenreTypes, "Id", "Name"), "", new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => Model.NumberInStock)
+            @Html.TextBoxFor(m => Model.NumberInStock, new { @class = "form-control" })
+        </div>
+
+        @Html.HiddenFor(m => Model.Id)
+
+        <button type="submit" class="btn btn-primary"> Update</button>
+    </section>
+}
