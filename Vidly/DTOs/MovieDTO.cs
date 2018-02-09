@@ -7,7 +7,7 @@ using Vidly.Models;
 
 namespace Vidly.DTOs
 {
-    public class MovieDTO
+    public class MovieDto
     {
         public int Id { get; set; }
 
@@ -19,6 +19,9 @@ namespace Vidly.DTOs
         [Required]
         public byte GenreId { get; set; }
 
+        public MovieGenreTypeDto Genre { get; set; }
+
+       // public Genre Genre { get; set; }
   
         public DateTime ReleaseDate { get; set; }
 

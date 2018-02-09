@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Vidly</title>
-    @Styles.Render("~/Content/css")
+
     @Scripts.Render("~/bundles/modernizr")
 
     <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -15,6 +15,7 @@
     <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
 </head>
 <body>
     @Html.Partial("_NavBar")

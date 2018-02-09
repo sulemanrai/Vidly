@@ -220,6 +220,7 @@
     <Compile Include="DTOs\CustomerDTO.cs" />
     <Compile Include="DTOs\MembershipTypeDto.cs" />
     <Compile Include="DTOs\MovieDTO.cs" />
+    <Compile Include="DTOs\MovieGenreTypeDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
