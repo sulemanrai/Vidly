@@ -10,14 +10,11 @@ namespace Vidly.Models
     {
         public int Id { get; set; }
 
-        [Required]
-        public string Name { get; set; }
-        
+        [Required] public string Name { get; set; }
+
         public Genre Genre { get; set; }
 
-        [Required]
-        [Display(Name = "Genre")]
-        public byte GenreId { get; set; }
+        [Required] [Display(Name = "Genre")] public byte GenreId { get; set; }
 
         [Required]
         [Display(Name = "Release Date")]
@@ -27,7 +24,9 @@ namespace Vidly.Models
 
         [Display(Name = "Number In Stock")]
         [Required]
-        [Range(1,20, ErrorMessage= "The field Number in Stock must be between 1 and 20")]
+        [Range(1, 20, ErrorMessage = "The field Number in Stock must be between 1 and 20")]
         public int NumberInStock { get; set; }
+
+        public byte NumberAvailable { get; set; }
     }
 }
